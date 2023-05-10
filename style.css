@@ -1,0 +1,945 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+#texte {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  text-align: justify;
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  background: linear-gradient(to right, #f5f5f5, #c9c9c9);
+  border-radius: 5px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+.par {
+  margin-top: 140px;
+}
+
+#texte::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 20px;
+  left: 20px;
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
+  background: linear-gradient(to right, #c9c9c9, #f5f5f5);
+  transform: rotateX(2deg) rotateY(-2deg);
+  border-radius: 5px;
+  box-shadow: 0 15px 10px rgba(0, 0, 0, 0.1);
+}
+#texte span {
+  color: rgb(188, 188, 8);
+  font-weight: bold;
+  font-size: 1.8em;
+  font-family: Arial, sans-serif;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 2px #ccc;
+}
+
+/* Ajouter un style spécifique à la première balise <span> dans le titre */
+.titre-texte span:first-child {
+  font-weight: bolder;
+  font-size: 1.6em;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 2px #333;
+}
+
+.titre-texte span:first-child {
+  font-weight: bolder;
+  font-size: 1.3em;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 0 #e5ff20, 2px 2px 0 #070505, 3px 3px 0 #000000;
+}
+
+/* Ajouter un style spécifique au texte */
+#texte,
+#texte {
+  font-size: 1.2em;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 0 #fff, 2px 2px 0 #ccc, 3px 3px 0 #999;
+}
+
+#texte::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: -2px;
+  left: -2px;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0)
+  );
+  filter: blur(5px);
+  pointer-events: none;
+}
+.banniere .contenu {
+  max-width: 70%;
+  text-align: center;
+  perspective: 2000px; /* Augmentation de la perspective pour un effet 3D plus prononcé */
+}
+
+#texti {
+  font-size: 18.7px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  text-shadow: 2px 2px #000;
+  padding: 10px;
+  background-color: #c8ff49;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #eeff00;
+  transform: translateZ(20px);
+  position: relative;
+  z-index: 1;
+}
+
+#texti:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: -5px;
+  bottom: -5px;
+  background: #050303;
+  z-index: -1;
+  border-radius: 7px;
+  transform: translateZ(-10px);
+}
+
+h2 {
+  color: #fff;
+  font-size: 5em;
+  margin-top: 50px;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 0;
+  padding: 0.2em 0.5em;
+  background-image: linear-gradient(
+    to right,
+    #f8c000,
+    #fc6100,
+    #00ff73,
+    #b8008a,
+    #633f9c,
+    #0097c8
+  );
+  background-size: 600%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glowing 8s ease-in-out infinite;
+  text-shadow: 0px 0px 20px #fff;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0%;
+  }
+  50% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: 0%;
+  }
+}
+
+.banniere:hover .contenu h2:before {
+  transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateZ(0px); /* Effet 3D */
+  opacity: 1;
+}
+
+.contenu p:nth-child(2) {
+  color: #ffff;
+  font-size: 1.2em;
+}
+
+header {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  transition: 0.5s;
+}
+
+.logo {
+  color: #fff;
+  font-weight: bold;
+  font-size: 2em;
+  text-decoration: none;
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7); /* Ajout d'une ombre pour l'effet 3D */
+  transform-style: preserve-3d; /* Activation du rendu 3D */
+  perspective: 1000px; /* Profondeur de la perspective */
+}
+.logo span {
+  color: #d4ff00;
+  transform: translateZ(
+    30px
+  ); /* Déplacement vers l'arrière pour créer l'effet 3D */
+  transition: transform 0.5s; /* Ajout d'une transition pour l'animation */
+}
+
+.logo:hover span {
+  transform: translateZ(
+    0
+  ); /* Réinitialisation de la position en hover pour l'animation */
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 60px;
+  padding: 0 20px;
+}
+
+.navbar li {
+  list-style: none;
+  margin: 10;
+}
+
+.navbar a {
+  display: block;
+  color: #030202;
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: all 0.2s ease;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.navbar a:hover {
+  background-color: #e7ff0e;
+  color: #0b0202;
+  transform: rotateX(360deg);
+}
+
+.menuToggle {
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.menuToggle:before,
+.menuToggle:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 2px;
+  background-color: #333;
+  transform: translate(-50%, -50%);
+  transition: all 0.2s ease;
+}
+
+.menuToggle:before {
+  transform-origin: center right;
+}
+
+.menuToggle:after {
+  transform-origin: center left;
+}
+
+.menuToggle.active:before {
+  transform: rotate(45deg) translate(-50%, -50%);
+}
+
+.menuToggle.active:after {
+  transform: rotate(-45deg) translate(-50%, -50%);
+}
+
+.menuToggle.active:before,
+.menuToggle.active:after {
+  top: 50%;
+  left: 50%;
+}
+
+.btn-reserve {
+  padding: 10px 20px;
+  background: #778899;
+  margin-top: -10px;
+  text-transform: uppercase;
+}
+
+.btn-reserve:hover {
+  background: #778899;
+  transition: ease-out;
+}
+
+header .navbar li a:hover {
+  color: #778899;
+  border-bottom: 2px solid #5896d3;
+}
+
+.text-3d {
+  display: inline-block;
+  font-size: 3em;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  position: relative;
+  perspective: 100px;
+  transition: all 0.5s ease-out;
+}
+
+.text-3d::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform-origin: left;
+  transform: rotateY(0deg) translateZ(-20px);
+  filter: drop-shadow(0 0 2px #000);
+  opacity: 0.7;
+}
+
+.text-3d:hover::before {
+  transform: rotateY(180deg) translateZ(-20px);
+  opacity: 1;
+}
+.banniere {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./images/10.png);
+  background-size: cover;
+  transform-style: preserve-3d; /* Activation du rendu 3D */
+  perspective: 1000px; /* Profondeur de la perspective */
+}
+.banniere:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.3
+  ); /* Ajout d'un fond semi-transparent pour l'effet 3D */
+  transform: translateZ(
+    -30px
+  ); /* Déplacement vers l'avant pour créer l'effet 3D */
+}
+
+.banniere .contenu {
+  max-width: 70%;
+  text-align: center;
+}
+.banniere .contenu h2 {
+  color: #0a0202;
+  font-size: 3em;
+  margin-top: -500px;
+
+  text-transform: capitalize;
+  font-weight: bold;
+  font-family: revert;
+  /* Ajout d'un effet de texte en 3D */
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transform: translateZ(50px) rotateX(25deg); /* Ajuster les valeurs pour obtenir l'effet de profondeur et d'inclinaison souhaité */
+}
+.contenu p:nth-child(2) {
+  color: #ffff;
+  font-size: 1.2em;
+}
+
+.btn1 {
+  font-size: 1em;
+  color: #ffff;
+  background: #a2b409;
+  padding: 10px 20px;
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.5s;
+  margin-left: 10px;
+}
+.btn2 {
+  font-size: 1em;
+  color: #fff;
+  background: #2a4963;
+  padding: 10px 20px;
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.5s;
+  margin-left: 10px;
+}
+
+.btn1:hover {
+  letter-spacing: 4px;
+}
+section {
+  padding: 100px;
+}
+.row {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.row .col50 {
+  position: relative;
+  width: 35%;
+  justify-content: center;
+  align-items: center;
+}
+
+.col50.w {
+  width: 50%;
+}
+
+.row .col50 h2 {
+  margin-bottom: 20px;
+}
+
+.titre-texte {
+  color: #333;
+  font-size: 3em;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 1px 2px #000000;
+  letter-spacing: 2px;
+}
+
+.titre-texte span {
+  color: #fffb03;
+  text-shadow: 2px 2px #333;
+}
+
+.img {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.img:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+}
+
+.img img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: inherit;
+  transition: transform 0.2s ease-in-out;
+}
+
+.img:hover img {
+  transform: scale(1.1);
+}
+
+.titre {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.menu {
+  margin-top: -100px;
+}
+
+.menu .contenu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.menu .contenu .box {
+  width: 350px;
+  margin: 20px;
+  border: 20px solid #fff;
+  box-shadow: 20px 15px 35px rgba(0, 0, 0, 0.8);
+}
+
+.menu .contenu .box .imbox {
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+
+.menu .contenu .box .imbox img {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 100%;
+  object-position: center -6px;
+}
+
+.menu .contenu .box .text {
+  text-align: center;
+  font-weight: 300px;
+  color: #111;
+}
+
+.menu .contenu .box .text h3 {
+  font-weight: 400;
+}
+
+.expert {
+  margin-top: -100px;
+}
+
+.expert .contenu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 40px;
+  gap: 20px;
+}
+
+.expert .contenu .box {
+  margin: 15px;
+}
+.expert .contenu .box img {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  top: 0;
+  left: 0;
+  border-radius: 100%;
+  object-position: center -6px;
+  object-fit: cover;
+}
+
+/* .expert .contenu .box h3 {
+  color: #111;
+  font-weight: 400;
+  text-align: center;
+} */
+.expert .contenu .box h3 {
+  font-size: 1rem; /* Taille de police */
+  font-weight: 400; /* Épaisseur de police */
+  text-align: center; /* Alignement du texte au centre */
+  text-transform: uppercase; /* Texte en majuscules */
+  letter-spacing: 0.1rem; /* Espacement entre les lettres */
+  margin: 0; /* Réinitialiser la marge par défaut */
+  padding: 1rem 0; /* Ajouter un peu de rembourrage pour l'espace */
+  text-shadow: 2px 2px 0 #ccc, 3px 3px 0 #bbb; /* Effet 3D */
+}
+
+.temoignage {
+  background-image: url(./images/cikhw.jpg);
+  background-size: cover;
+}
+
+.temoignage .contenu {
+  display: flex;
+  margin-top: 40px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.temoignage .contenu .box {
+  width: 340px;
+  margin: 20px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 15px;
+  padding: 40px;
+}
+
+.temoignage .contenu .box .imbox {
+  width: 80px;
+  height: 80px;
+  border-radius: 50px;
+  position: relative;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.temoignage .contenu .box .imbox img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  justify-content: center;
+  align-items: center;
+}
+
+.temoignage .contenu .box .text {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+}
+
+.temoignage .contenu .box .text h3 {
+  color: #778899;
+  margin-top: 20px;
+  font-size: 1em;
+  font-weight: 600;
+}
+
+.blanc .titre-texte {
+  color: #fff;
+}
+
+.blanc .titre-texte,
+.blanc p {
+  color: #fff;
+}
+/* 
+.contact {
+  background-image: url(./images/img-form.jpg);
+  background-size: cover;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.8);
+  width: 100%;
+  background-position: unset;
+} */
+.contact {
+  background-image: url(./images/nahlout2.jpg);
+  background-size: cover;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.8);
+  padding: 75px;
+}
+
+.contact .titre {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.contact .titre-text {
+  font-size: 40px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.contact .sous-titre {
+  font-size: 20px;
+  margin-top: 20px;
+  font-style: italic;
+}
+
+.contacttable {
+  margin: 0 auto;
+  width: 70%;
+  border-collapse: collapse;
+  background-color: #fff;
+  opacity: 0.8;
+}
+
+.contacttable td {
+  padding: 15px;
+  border: 1px solid #ccc;
+  text-align: left;
+  vertical-align: top;
+  font-size: 18px;
+}
+
+.contacttable td:first-child {
+  font-size: 24px;
+  color: #0073e6;
+  width: 30%;
+  font-weight: bold;
+}
+
+.contacttable td:nth-child(2) a {
+  color: #0073e6;
+  text-decoration: none;
+}
+
+.contacttable td:nth-child(2) a:hover {
+  text-decoration: underline;
+}
+
+.contacttable td.email {
+  position: relative;
+  padding-right: 30px;
+}
+
+.contacttable td.email:before {
+  content: "\f0e0";
+  font-family: FontAwesome;
+  position: absolute;
+  right: 10px;
+  top: 20%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: #0073e6;
+}
+/* .contactform {
+  padding: 75px 50px;
+  background: #fff;
+  box-shadow: 5px 15px 50px rgba(0, 0, 0, 0.8);
+  max-width: 500px;
+  margin-top: 50px;
+  justify-content: center;
+  align-items: center;
+  margin-left: 38%;
+}
+
+.contactform .inputboite {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.contactform h3 {
+  color: #111;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.contactform .inputboite input,
+.contactform .inputboite textarea {
+  width: 100%;
+  border: 1px solid #555;
+  padding: 10px;
+  color: #111;
+  outline: none;
+  font-size: 16px;
+  font-weight: 300;
+  resize: none;
+}
+
+.contactform .inputboite input[type="submit"] {
+  font-size: 1em;
+  font-weight: 700;
+  color: #ffff;
+  background: #778899;
+  display: inline-block;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  outline: none;
+  border: none;
+  transition: 0.5s;
+  max-width: 120px;
+  align-items: center;
+  justify-content: center;
+} */
+
+.copyright {
+  padding: 5px 5px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  background: rgba(228, 222, 222);
+  text-align: center;
+}
+
+.copyright p:nth-child(1) {
+  color: #333;
+}
+
+.copyright a {
+  color: #778899;
+  text-decoration: none;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.contact .titre-text span {
+  color: #778899;
+  font-size: 1.4em;
+}
+
+header.sticky {
+  background: #fff;
+  padding: 10px 10px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+header.sticky .logo {
+  color: #000;
+}
+
+header.sticky .navbar li a {
+  color: #000;
+}
+
+header.sticky li a:hover {
+  color: #778899;
+  border-bottom: 2px solid #778899;
+}
+
+@media (max-width: 991px) {
+  header,
+  header.sticky {
+    padding: 10px 20px;
+  }
+
+  header .navbar li {
+    margin-left: 0px;
+  }
+
+  header .navbar li a {
+    text-decoration: none;
+    color: #111;
+    font-size: 1.6em;
+    font-weight: 300;
+  }
+
+  .navbar {
+    display: none;
+  }
+  section {
+    padding: 20px;
+  }
+
+  header .navbar.active {
+    width: 100%;
+    height: calc(100% -68px);
+    position: fixed;
+    top: 68px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: #ffff;
+    align-items: center;
+  }
+
+  .menuToggle {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background-image: url(./images/menu.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    background-size: 30px;
+  }
+
+  .menuToggle.active {
+    background-image: url(./images/close.png);
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-origin: center;
+  }
+
+  header.sticky .menuToggle {
+    filter: invert(1);
+  }
+
+  .banniere .contenu h2 {
+    font-size: 2em;
+  }
+
+  .row .col50 img {
+    margin-left: 18%;
+  }
+
+  .contenu p:nth-child(2) {
+    font-size: 1.2em;
+  }
+  .expert {
+    margin-top: 0px;
+  }
+
+  .menu {
+    margin-top: 0px;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .temoignage h2 {
+    font-size: 2em;
+    text-align: center;
+  }
+
+  .temoignage p {
+    text-align: center;
+  }
+
+  .contactform {
+    margin-left: 25%;
+  }
+
+  .row .col50 {
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .banniere .contenu h2 {
+    font-size: 2.2em;
+    color: #fff;
+  }
+
+  .titre-text {
+    color: #000;
+    font-size: 2rem;
+    font-weight: 300;
+    text-transform: capitalize;
+  }
+
+  .temoignage h2 {
+    font-size: 1.1em;
+  }
+
+  .temoignage p {
+    text-align: center;
+  }
+}
